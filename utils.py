@@ -38,3 +38,13 @@ def plot_harmonics(es_df, total_pathes_df,
                  verticalalignment='center', horizontalalignment='left')
     plt.show()
     
+
+def remove_duplicates(input_string):
+    cleaned_path = []
+    last_char = None
+
+    for char in input_string:
+        if char != last_char:
+            cleaned_path.append(char)
+            last_char = char
+    return cleaned_path
